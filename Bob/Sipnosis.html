@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Town Saw Game - Demo</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 800px;
+    max-width: 95%;
+    text-align: center;
+    background: #000;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #3bb7ff;
+    text-shadow: 2px 2px 0 #0a3a66;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.highlight {
+    color: #4cff4c;
+    font-weight: bold;
+}
+
+.btn {
+    display: block;
+    margin: 12px auto;
+    padding: 12px 20px;
+    width: 260px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-play {
+    background: #2ecc71;
+    color: #003311;
+}
+
+.btn-play:hover {
+    background: #27ae60;
+}
+
+.btn-en {
+    background: #3498db;
+    color: white;
+}
+
+.btn-en:hover {
+    background: #2980b9;
+}
+
+.btn-sub {
+    background: #00ff66;
+    color: #003311;
+}
+
+.btn-sub:hover {
+    background: #00cc55;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer a {
+    color: #ffd24c;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="title">En busqueda de la formula secreta</div>
+
+    <div class="Sipnosis">
+        El malvado <span class="highlight">Plakton</span> construye a un robot para robar la fórmula secreta, 
+        este robot tendrá que explorar todo fondo de bikini en búsqueda de pistas o objetos 
+        que le ayuden a robar la fórmula secreta de la cangreburger.<br>
+        Ayúdalo a rescatarlo sano y salvo.
+    </div>
+
+    <button class="btn btn-play" onclick="alert('Iniciar juego')">JUGAR</button>
+
+    <div class="footer">
+        Ver link del Github de este proyecto
+        <a href="https://www.inkagames.com" target="_blank">
+            www.inkagames.com
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
