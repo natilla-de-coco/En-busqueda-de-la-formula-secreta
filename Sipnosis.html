@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Bob-juego-Demo</title>
+
+<style>
+/* BODY */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+    width: 800px;
+    max-width: 95%;
+    background: #000;
+    padding: 20px;
+}
+
+/* FLEX CONTENT */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que se acomode en vertical en pantallas pequeñas */
+}
+
+/* IMAGENES */
+.formula {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.bob {
+    width: 160px;
+    flex-shrink: 0;
+}
+
+/* TEXTO */
+.text {
+    flex: 1;
+    text-align: left;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #3bb7ff;
+    text-shadow: 2px 2px 0 #0a3a66;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.highlight {
+    color: #4cff4c;
+    font-weight: bold;
+}
+
+/* BOTON */
+.btn {
+    display: block;
+    margin: 12px 0;
+    padding: 12px 20px;
+    width: 260px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-play {
+    background: #2ecc71;
+    color: #003311;
+}
+
+.btn-play:hover {
+    background: #27ae60;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+}
+
+.footer a {
+    color: #ffd24c;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVO */
+@media (max-width: 700px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .btn {
+        margin: 15px auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="content">
+        <!-- Fórmula secreta -->
+        <img src="Imagenes/Formula-secreta.png" class="formula">
+
+        <!-- Texto -->
+        <div class="text">
+            <div class="title">En búsqueda de la fórmula secreta</div>
+
+            <div class="description">
+                El malvado <span class="highlight">Plankton</span> construye un robot para robar la fórmula secreta. 
+                Este robot deberá explorar todo Fondo de Bikini buscando pistas y objetos 
+                para conseguir la receta de la cangreburger.
+            </div>
+
+            <button class="btn btn-play" onclick="alert('Iniciar juego')">
+                JUGAR
+            </button>
+        </div>
+
+        <!-- Bob Robot -->
+        <img src="Imagenes/Bob-robot.png" class="bob">
+    </div>
+
+    <div class="footer">
+        Ver Github del proyecto:
+        <a href="https://github.com/natilla-de-coco/En-busqueda-de-la-formula-secreta.git" target="_blank">
+            Pulsa aquí
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
