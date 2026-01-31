@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Town Saw Game - Demo</title>
+<title>Bob-juego-Demo</title>
 
 <style>
+/* BODY */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -16,19 +17,46 @@ body {
     height: 100vh;
 }
 
+/* CONTAINER */
 .container {
     width: 800px;
     max-width: 95%;
-    text-align: center;
     background: #000;
+    padding: 20px;
+}
+
+/* FLEX CONTENT */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que se acomode en vertical en pantallas pequeñas */
+}
+
+/* IMAGENES */
+.formula {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.bob {
+    width: 160px;
+    flex-shrink: 0;
+}
+
+/* TEXTO */
+.text {
+    flex: 1;
+    text-align: left;
 }
 
 .title {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: bold;
     color: #3bb7ff;
     text-shadow: 2px 2px 0 #0a3a66;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .description {
@@ -42,9 +70,10 @@ body {
     font-weight: bold;
 }
 
+/* BOTON */
 .btn {
     display: block;
-    margin: 12px auto;
+    margin: 12px 0;
     padding: 12px 20px;
     width: 260px;
     border: none;
@@ -64,28 +93,12 @@ body {
     background: #27ae60;
 }
 
-.btn-en {
-    background: #3498db;
-    color: white;
-}
-
-.btn-en:hover {
-    background: #2980b9;
-}
-
-.btn-sub {
-    background: #00ff66;
-    color: #003311;
-}
-
-.btn-sub:hover {
-    background: #00cc55;
-}
-
+/* FOOTER */
 .footer {
     margin-top: 25px;
     font-size: 14px;
     color: #ccc;
+    text-align: center;
 }
 
 .footer a {
@@ -96,29 +109,60 @@ body {
 .footer a:hover {
     text-decoration: underline;
 }
+
+/* RESPONSIVO */
+@media (max-width: 700px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .btn {
+        margin: 15px auto;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <div class="container">
-    <div class="title">En busqueda de la formula secreta</div>
 
-    <div class="Sipnosis">
-        El malvado <span class="highlight">Plakton</span> construye a un robot para robar la fórmula secreta, 
-        este robot tendrá que explorar todo fondo de bikini en búsqueda de pistas o objetos 
-        que le ayuden a robar la fórmula secreta de la cangreburger.<br>
-        Ayúdalo a rescatarlo sano y salvo.
+    <div class="content">
+        <!-- Fórmula secreta -->
+        <img src="Imagenes/Formula-secreta.png" class="formula">
+
+        <!-- Texto -->
+        <div class="text">
+            <div class="title">En búsqueda de la fórmula secreta</div>
+
+            <div class="description">
+                El malvado <span class="highlight">Plankton</span> construye un robot para robar la fórmula secreta. 
+                Este robot deberá explorar todo Fondo de Bikini buscando pistas y objetos 
+                para conseguir la receta de la cangreburger.
+            </div>
+
+            <button class="btn btn-play" onclick="alert('Iniciar juego')">
+                JUGAR
+            </button>
+        </div>
+
+        <!-- Bob Robot -->
+        <img src="Imagenes/Bob-robot.png" class="bob">
     </div>
-
-    <button class="btn btn-play" onclick="alert('Iniciar juego')">JUGAR</button>
 
     <div class="footer">
-        Ver link del Github de este proyecto
-        <a href="https://www.inkagames.com" target="_blank">
-            www.inkagames.com
+        Ver Github del proyecto:
+        <a href="https://github.com/natilla-de-coco/En-busqueda-de-la-formula-secreta.git" target="_blank">
+            Pulsa aquí
         </a>
     </div>
+
 </div>
 
 </body>
